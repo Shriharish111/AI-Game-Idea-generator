@@ -24,13 +24,13 @@ The interface is designed like a futuristic game development console.
 ## 🧰 Tech Stack
 
 | Layer       | Technology |
-|-------------|------------|
-| Backend     | Python, Flask |
-| AI Engine   | Google Gemini API |
-| Auth        | Google OAuth (Authlib) |
-| Frontend    | HTML, CSS (Cyberpunk UI) |
-| Hosting     | Render |
-| Versioning  | Git + GitHub |
+|------------|------------|
+| Backend    | Python, Flask |
+| AI Engine  | Google Gemini API |
+| Auth       | Google OAuth (Authlib) |
+| Frontend   | HTML, CSS (Cyberpunk UI) |
+| Hosting    | Render |
+| Versioning | Git + GitHub |
 
 ---
 
@@ -66,11 +66,13 @@ bash
 Copy code
 python -m venv venv
 venv\Scripts\activate   # Windows
-3. Install Dependencies
-bash
+
+### 3. Install Dependencies
+
+```bash
 Copy code
 pip install -r requirements.txt
-4. Create Environment File
+### 4. Create Environment File
 Create a file named .env
 
 env
@@ -79,7 +81,8 @@ GEMINI_API_KEY=your_gemini_api_key
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 SECRET_KEY=any_random_string
-5. Run Application
+
+### 5. Run Application
 bash
 Copy code
 python app.py
@@ -88,7 +91,7 @@ Open in browser:
 cpp
 Copy code
 http://127.0.0.1:5000
-🌍 Deployment on Render
+## 🌍 Deployment on Render
 Required Files
 requirements.txt
 
@@ -111,7 +114,7 @@ Add in Google Cloud Console:
 pgsql
 Copy code
 https://your-app-name.onrender.com/login/callback
-🧠 How It Works
+## 🧠 How It Works
 User logs in using Google
 
 Enters a game concept idea
@@ -124,7 +127,7 @@ UI renders interactive cyberpunk cards
 
 Loading animation plays while AI generates
 
-📄 Output Format
+## 📄 Output Format
 Each generated concept includes:
 
 Game Title
@@ -149,7 +152,7 @@ Tone & Atmosphere
 
 Unique Selling Point
 
-🎯 Use Cases
+## 🎯 Use Cases
 Game concept ideation
 
 Story development
@@ -162,7 +165,7 @@ AI SaaS prototype
 
 Portfolio project
 
-🔮 Planned Enhancements
+## 🔮 Planned Enhancements
 Save projects per user
 
 PDF export
@@ -175,11 +178,9 @@ Prompt templates
 
 Admin dashboard
 
-📜 License
+## 📜 License
 MIT License — Free to use and modify.
 
-👨‍💻 Author
+## 👨‍💻 Author
 Shri Harish
 Game Developer & AI Engineer
-
-⚡ Design the future of games with AI.
