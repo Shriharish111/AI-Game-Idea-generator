@@ -58,7 +58,7 @@ Copy code
 
 ### 1. Clone Repository
 
-```bash
+bash
 git clone https://github.com/yourusername/ai-prompt-generator.git
 cd ai-prompt-generator
 2. Create Virtual Environment
@@ -69,7 +69,7 @@ venv\Scripts\activate   # Windows
 
 ### 3. Install Dependencies
 
-```bash
+bash
 Copy code
 pip install -r requirements.txt
 ### 4. Create Environment File
@@ -81,8 +81,8 @@ GEMINI_API_KEY=your_gemini_api_key
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 SECRET_KEY=any_random_string
+###5. Run Application
 
-### 5. Run Application
 bash
 Copy code
 python app.py
@@ -91,7 +91,9 @@ Open in browser:
 cpp
 Copy code
 http://127.0.0.1:5000
-## 🌍 Deployment on Render
+
+##🌍 Deployment on Render
+
 Required Files
 requirements.txt
 
@@ -114,7 +116,9 @@ Add in Google Cloud Console:
 pgsql
 Copy code
 https://your-app-name.onrender.com/login/callback
+
 ## 🧠 How It Works
+
 User logs in using Google
 
 Enters a game concept idea
@@ -128,6 +132,7 @@ UI renders interactive cyberpunk cards
 Loading animation plays while AI generates
 
 ## 📄 Output Format
+
 Each generated concept includes:
 
 Game Title
@@ -153,6 +158,7 @@ Tone & Atmosphere
 Unique Selling Point
 
 ## 🎯 Use Cases
+
 Game concept ideation
 
 Story development
@@ -166,6 +172,7 @@ AI SaaS prototype
 Portfolio project
 
 ## 🔮 Planned Enhancements
+
 Save projects per user
 
 PDF export
@@ -178,9 +185,11 @@ Prompt templates
 
 Admin dashboard
 
-## 📜 License
+## 📜 License 
+
 MIT License — Free to use and modify.
 
-## 👨‍💻 Author
+## 👨‍💻 Author 
+
 Shri Harish
 Game Developer & AI Engineer
