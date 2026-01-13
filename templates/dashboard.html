@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Prompt Generator Console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cyberpunk Theme -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <h1>⚡ AI Prompt Generator Console</h1>
+        <p class="subtitle">Cyberpunk Game Design Interface</p>
+
+        <p style="color:#94a3b8;font-size:14px;">
+            Logged in as <b>{{ user.name }}</b> — {{ user.email }}
+        </p>
+
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <!-- Prompt Form -->
+    <form method="POST" id="promptForm">
+
+        <textarea name="idea" placeholder="Enter your game concept or idea..." required></textarea>
+
+        <select name="prompt_type" required>
+            <option value="">Prompt Type</option>
+            <option>Game Design</option>
+            <option>Story Writing</option>
+            <option>World Building</option>
+            <option>Character Design</option>
+        </select>
+
+        <select name="genre" required>
+            <option value="">Genre</option>
+            <option>Cyberpunk</option>
+            <option>Sci-Fi</option>
+            <option>Horror</option>
+            <option>Fantasy</option>
+            <option>Action</option>
+        </select>
+
+        <select name="style" required>
+            <option value="">Style</option>
+            <option>Cinematic</option>
+            <option>Dark</option>
+            <option>Anime</option>
+            <option>Realistic</option>
+        </select>
+
+        <select name="platform" required>
+            <option value="">Target Platform</option>
+            <option>PC</option>
+            <option>PlayStation</option>
+            <option>Xbox</option>
+            <option>All Platforms</option>
+        </select>
+
+        <button type="submit" id="generateBtn">Generate Game Concept</button>
+
+    </form>
+
+    <!-- AI Output -->
+    {% if result %}
+
+    <div class="doc-container">
+
+        <!-- Title Card -->
+        <div class="doc-card glow">
+            <h2>🎮 {{ result.title }}</h2>
+            <p class="tag">{{ result.genre }} | {{ result.platforms }}</p>
+        </div>
+
+        <!-- Core Concept -->
+        <div class="doc-card">
+            <h3>📌 Core Concept</h3>
+            <p>{{ result.logline }}</p>
+        </div>
+
+        <!-- Features -->
+        <div class="doc-card">
+            <h3>✨ Key Features</h3>
+            <ul>
+                {% for f in result.features %}
+                <li>{{ f }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Setting -->
+        <div class="doc-card">
+            <h3>🌍 World Setting</h3>
+            <p>{{ result.setting }}</p>
+        </div>
+
+        <!-- Lore -->
+        <div class="doc-card">
+            <h3>📖 Lore & Narrative</h3>
+            <p>{{ result.lore }}</p>
+        </div>
+
+        <!-- Protagonists -->
+        <div class="doc-card">
+            <h3>🧑 Protagonists</h3>
+            <p>{{ result.protagonists }}</p>
+        </div>
+
+        <!-- Antagonists -->
+        <div class="doc-card">
+            <h3>👁 Antagonists</h3>
+            <p>{{ result.antagonists }}</p>
+        </div>
+
+        <!-- Gameplay -->
+        <div class="doc-card">
+            <h3>🎮 Gameplay Loop</h3>
+            <p>{{ result.gameplay_loop }}</p>
+        </div>
+
+        <!-- Tone -->
+        <div class="doc-card">
+            <h3>🎭 Tone & Atmosphere</h3>
+            <p>{{ result.tone }}</p>
+        </div>
+
+        <!-- USP -->
+        <div class="doc-card highlight">
+            <h3>🚀 Unique Selling Point</h3>
+            <p>{{ result.usp }}</p>
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<!-- Cyberpunk Loading Screen -->
+<div id="loading-screen" class="loading-screen">
+    <div class="loader-box">
+        <div class="neon-spinner"></div>
+        <p class="loading-text">Generating AI Concept...</p>
+        <p class="loading-sub">Accessing Neural Core</p>
+    </div>
+</div>
+
+<!-- Loading Script -->
+<script>
+const form = document.getElementById("promptForm");
+const loadingScreen = document.getElementById("loading-screen");
+const btn = document.getElementById("generateBtn");
+
+form.addEventListener("submit", () => {
+    btn.disabled = true;
+    btn.innerText = "Generating...";
+    loadingScreen.style.display = "flex";
+});
+</script>
+
+</body>
+</html>
