@@ -61,7 +61,8 @@ Copy code
 bash
 git clone https://github.com/yourusername/ai-prompt-generator.git
 cd ai-prompt-generator
-2. Create Virtual Environment
+
+### 2. Create Virtual Environment
 bash
 Copy code
 python -m venv venv
@@ -92,7 +93,9 @@ cpp
 Copy code
 http://127.0.0.1:5000
 
-##🌍 Deployment on Render
+---
+
+## 🌍 Deployment on Render
 
 Required Files
 requirements.txt
@@ -117,79 +120,91 @@ pgsql
 Copy code
 https://your-app-name.onrender.com/login/callback
 
+---
+
 ## 🧠 How It Works
 
-User logs in using Google
+- User logs in using Google
 
-Enters a game concept idea
+- Enters a game concept idea
 
-Gemini AI generates structured JSON output
+- Gemini AI generates structured JSON output
 
-Flask parses the JSON
+- Flask parses the JSON
 
-UI renders interactive cyberpunk cards
+- UI renders interactive cyberpunk cards
 
-Loading animation plays while AI generates
+- Loading animation plays while AI generates
+
+---
 
 ## 📄 Output Format
 
-Each generated concept includes:
+- Each generated concept includes:
 
-Game Title
+- Game Title
 
-Genre & Platforms
+- Genre & Platforms
 
-Core Concept (Logline)
+- Core Concept (Logline)
 
-Key Features
+- Key Features
 
-World Setting
+- World Setting
 
-Lore & Narrative
+- Lore & Narrative
 
-Protagonists
+- Protagonists
 
-Antagonists
+- Antagonists
 
-Gameplay Loop
+- Gameplay Loop
 
-Tone & Atmosphere
+- Tone & Atmosphere
 
-Unique Selling Point
+- Unique Selling Point
+
+---
 
 ## 🎯 Use Cases
 
-Game concept ideation
+- Game concept ideation
 
-Story development
+- Story development
 
-World building
+- World building
 
-Pitch document generation
+- Pitch document generation
 
-AI SaaS prototype
+- AI SaaS prototype
 
-Portfolio project
+- Portfolio project
+
+---
 
 ## 🔮 Planned Enhancements
 
-Save projects per user
+- Save projects per user
 
-PDF export
+- PDF export
 
-Shareable links
+- Shareable links
 
-Mobile PWA
+- Mobile PWA
 
-Prompt templates
+- Prompt templates
 
-Admin dashboard
+- Admin dashboard
+
+---
 
 ## 📜 License 
 
-MIT License — Free to use and modify.
+- - MIT License — Free to use and modify.
+
+---
 
 ## 👨‍💻 Author 
 
-Shri Harish
-Game Developer & AI Engineer
+- Shri Harish
+- - Game Developer & AI Engineer
