@@ -61,7 +61,7 @@ def home():
 
 @app.route("/login")
 def login():
-    redirect_uri = url_for("https://gamidea.onrender.com/login/callback", _external=True)
+    redirect_uri = url_for("auth_callback", _external=True)
     return google.authorize_redirect(redirect_uri)
 
 
